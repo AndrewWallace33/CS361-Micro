@@ -6,8 +6,9 @@ Open up a standalone terminal window and run BackgroundSelector.py in it. After 
 
 # Request Data
 From your program connect to the socket with the following info over a TCP connection:
-\nhostname = localhost
-\nportnumber = 2554. 
+
+hostname = localhost
+portnumber = 2554
 
 ```my_socket.connect((hostname, portnumber))```
 
