@@ -44,4 +44,4 @@ image_number = int(response)
 ```
 
 # Error Handling
-Server side if there is any issues or if an invalid integer is passed to the server (a number less than or equal to 0) the return value will be sent as a -1. So be sure to handle the -1 with a default fall back value.
+Server side if there is any issues or if an invalid integer is passed to the server (a number less than or equal to 0 or any non integer) the return value will be sent as a -1. So be sure to handle the -1 with a default fall back value.
