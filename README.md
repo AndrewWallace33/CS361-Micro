@@ -1,6 +1,8 @@
 # CS361-Micro
 Microservice for my partners CS361 Project
 
+# Communication Contract
+
 # Run the Microservice
 Open up a standalone terminal window and run BackgroundSelector.py in it. After that the server will be good to go.
 
