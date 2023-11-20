@@ -12,12 +12,19 @@ From your program connect to the socket with the following info over a TCP conne
 hostname = localhost
 
 portnumber = 2554
-
-```my_socket.connect((hostname, portnumber))```
+Socket Setup and initial connection:
+```
+with socket(AF_INET, SOCK_STREAM) as my_socket:
+  my_socket.connect((hostname, portnumber))
+```
 
 Once connected send an integer value corresponding to the number of available background images you have (1 indexed - I.E you will never have 0 returned).
 
-```my_socket.send(str(number_of_backgrounds).encode())```
+Sending the Data to the server:
+```
+number_of_backgrounds = 10
+my_socket.send(str(number_of_backgrounds).encode())
+```
 
 Data has now been sent to server for processing.
 
@@ -25,6 +32,7 @@ Data has now been sent to server for processing.
 
 To recieve data - have your same socket from above set the value of a recv call to a variable. The below will return a string corresponding to randomly selected image number.
 
+Recieving the Data back from the Server:
 ```
 response = my_socket.recv(4096).decode()
 image_number = int(response)
